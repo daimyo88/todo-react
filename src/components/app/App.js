@@ -24,8 +24,9 @@ class App extends React.Component {
         this.setState({
           userName : name,
           loggedIn: true
+        }, () => {
+          this.localStorage.setData('name', this.state.userName)
         });
-        this.localStorage.setData('name', this.state.userName)
     }
   }
 

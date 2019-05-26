@@ -9,16 +9,16 @@ class LocalStorage extends React.Component {
   }
 
   getData(name) {
-    const value = localStorage.getItem(name);
+    const value = window.localStorage.getItem(name);
     return value;
   }
 
   setData(name, value) {
-    localStorage.setItem(name, value);
+    window.localStorage.setItem(name, value);
   }
 
   clearData(name){
-    localStorage.removeItem(name);
+    window.localStorage.removeItem(name);
   }
 }
 
